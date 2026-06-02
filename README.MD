@@ -1,141 +1,174 @@
 # 📊 AI-Powered Automated Data Insights Dashboard
 
-An intelligent data analytics application that automatically analyzes uploaded CSV datasets and generates statistical summaries, interactive visualizations, and AI-generated business insights.
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![Flask](https://img.shields.io/badge/Flask-WebApp-green)
+![Gradio](https://img.shields.io/badge/Gradio-UI-orange)
+![OpenAI](https://img.shields.io/badge/OpenAI-GPT-red)
+![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-This project provides two deployment options:
+An AI-powered analytics platform that automatically transforms raw CSV datasets into actionable business intelligence through automated data cleaning, exploratory data analysis (EDA), interactive visualizations, and LLM-generated insights.
 
-* **Flask Web Application** → Professional dashboard experience
-* **Gradio Interface** → Fast experimentation and prototyping
+The system acts as an intelligent data analyst by combining traditional analytics with Generative AI to help users quickly understand business trends, anomalies, risks, and opportunities.
 
 ---
 
-# Features
+## 🚀 Key Features
 
-## 📁 Dataset Upload & Processing
+### 📁 Automated Data Ingestion
 
-* Upload CSV datasets instantly
-* Automatic dataset ingestion
-* Handles missing values automatically
-* Cleans and standardizes column names
+- CSV Upload Support
+- Automatic Schema Detection
+- Missing Value Handling
+- Data Type Identification
+- Column Standardization
 
-## Intelligent Data Cleaning
-
-* Missing value handling
-* Automatic date detection
-* Column normalization
-* Dataset preprocessing
-
-## 📊 Exploratory Data Analysis (EDA)
+### 📊 Exploratory Data Analysis
 
 Automatically generates:
 
-* Dataset shape and metadata
-* Numeric and categorical column detection
-* Missing value analysis
-* Descriptive statistics
-* Correlation analysis
+- Dataset Overview
+- Summary Statistics
+- Missing Value Analysis
+- Correlation Analysis
+- Distribution Analysis
+- Top Category Insights
 
-## 📈 Interactive Visualizations
+### 📈 Interactive Visual Analytics
 
-Built using Plotly:
+Powered by Plotly:
 
-* Histograms
-* Correlation Heatmaps
-* Top Category Analysis
-* Interactive charts with zoom/pan support
+- Histograms
+- Correlation Heatmaps
+- Category Comparisons
+- Interactive Dashboards
+- Zoom & Filter Support
 
-## 🤖 AI-Powered Business Insights
+### 🤖 AI-Powered Business Intelligence
 
-Using LLM-powered analysis:
+Using GPT-based analysis:
 
-* Key Findings
-* Business Insights
-* Risk Detection
-* Actionable Recommendations
+- Executive Summary
+- Key Findings
+- Business Risks
+- Opportunity Identification
+- Strategic Recommendations
+- Data Storytelling
 
 ---
 
-# 🏗 Project Structure
+## 🏗 System Architecture
 
 ```text
-automated-data-insights/
+CSV Dataset
+     │
+     ▼
+Data Cleaning Layer
+     │
+     ▼
+EDA Engine
+     │
+     ▼
+Visualization Engine
+     │
+     ▼
+LLM Insight Generator
+     │
+     ▼
+Business Dashboard
+```
 
-│
+---
+
+## 📂 Project Structure
+
+```text
+AI-Powered-Automated-Data-Insights/
 
 ├── app_flask.py
-
 ├── app_gradio.py
-
 ├── data_insights.py
-
 ├── ai_insights.py
-
 ├── requirements.txt
-
-│
+├── README.md
 
 ├── templates/
-
 │   ├── index.html
-
 │   └── results.html
-
-│
 
 ├── uploads/
 
-│
+├── screenshots/
+│   ├── dashboard.png
+│   ├── insights.png
+│   └── upload_page.png
 
-└── README.md
+└── docs/
+    └── Project_Demo.pdf
 ```
 
 ---
 
-# 🛠 Tech Stack
+## 📷 Application Screenshots
+
+### Upload Interface
+
+![Upload Interface](screenshots/flask_app1.png)
+![Upload Interface](screenshots/flask_app2.png)
+![Upload Interface](screenshots/flask_app3.png)
+![Upload Interface](screenshots/flask_app4.png)
+![Upload Interface](screenshots/flask_app5.png)
+![Upload Interface](screenshots/gradio_app1.png)
+![Upload Interface](screenshots/gradio_app2.png)
+![Upload Interface](screenshots/gradio_app3.png)
+![Upload Interface](screenshots/gradio_app4.png)
+
+
+
+
+---
+
+
+## 🛠 Technology Stack
 
 ### Backend
 
-* Python
-* Flask
-* Gradio
+- Python
+- Flask
+- Gradio
 
 ### Data Processing
 
-* Pandas
-* NumPy
+- Pandas
+- NumPy
 
 ### Visualization
 
-* Plotly
+- Plotly
 
 ### AI Layer
 
-* OpenAI API
-* GPT Models
+- OpenAI GPT Models
+
+### Deployment Ready
+
+- Local Deployment
+- Cloud Deployment
+- Docker Ready (Future)
 
 ---
 
-# ⚙ Installation
+## ⚙ Installation
 
-## 1. Clone Repository
-
-```bash
-git clone <repo-url>
-
-cd automated-data-insights
-```
-
-## 2. Create Virtual Environment
-
-### Windows
+### Clone Repository
 
 ```bash
-python -m venv venv
+git clone https://github.com/nawdeep001/AI-Powered-Automated-Data-Insights.git
 
-venv\Scripts\activate
+cd AI-Powered-Automated-Data-Insights
 ```
 
-### Linux / Mac
+### Create Virtual Environment
 
 ```bash
 python3 -m venv venv
@@ -143,19 +176,17 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-## 3. Install Dependencies
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
-
-# 🔑 Environment Variables
+### Configure Environment Variables
 
 Create a `.env` file:
 
-```text
+```env
 OPENAI_API_KEY=your_api_key
 
 OPENAI_BASE_URL=https://api.openai.com/v1
@@ -163,7 +194,7 @@ OPENAI_BASE_URL=https://api.openai.com/v1
 
 ---
 
-# ▶ Running Flask Application
+## ▶ Running Flask Dashboard
 
 ```bash
 python app_flask.py
@@ -177,7 +208,7 @@ http://127.0.0.1:5000
 
 ---
 
-# ▶ Running Gradio Application
+## ▶ Running Gradio Interface
 
 ```bash
 python app_gradio.py
@@ -191,54 +222,224 @@ http://127.0.0.1:7860
 
 ---
 
-# 📷 Application Workflow
+## 📈 Sample Workflow
 
 ```text
-Upload CSV
-
-↓
-
+Upload Dataset
+      │
+      ▼
 Data Cleaning
-
-↓
-
-EDA + Statistics
-
-↓
-
-Plot Generation
-
-↓
-
-AI Analysis
-
-↓
-
-Dashboard Results
+      │
+      ▼
+Exploratory Data Analysis
+      │
+      ▼
+Visualization Generation
+      │
+      ▼
+GPT Insight Generation
+      │
+      ▼
+Business Recommendations
 ```
 
 ---
 
-# Example Use Cases
+## 🎯 Business Applications
 
-* Business Expense Analysis
-* Financial Transaction Monitoring
-* Procurement Analytics
-* Sales Analytics
-* Customer Data Exploration
-* Fraud Detection Support
-* Vendor Analysis
+- Sales Analytics
+- Financial Reporting
+- Procurement Intelligence
+- Customer Analytics
+- Marketing Analytics
+- Vendor Evaluation
+- Fraud Detection Support
+- Operational Monitoring
+
+---
+
+## 🔮 Future Roadmap
+
+- Excel & XLSX Support
+- PDF Report Generation
+- Automated PowerPoint Export
+- Time-Series Forecasting
+- Anomaly Detection
+- Multi-File Analysis
+- RAG-Based Dataset Q&A
+- Agentic AI Data Analyst
+- Multi-Agent Analytics Framework
 
 ---
 
-# Future Improvements
+# 🐳 Docker Support
 
-* Excel Support
-* PDF Report Export
-* Multi-file Analysis
-* Time Series Analysis
-* Anomaly Detection
-* RAG-based Dataset Q&A
-* Agentic Data Analyst
+This project supports containerized deployment using Docker, enabling consistent execution across development, testing, and production environments.
+
+## Prerequisites
+
+- Docker Desktop installed and running
+- Docker Engine 28+ recommended
+
+Verify installation:
+
+```bash
+docker --version
+docker ps
+```
 
 ---
+
+## Build Docker Image
+
+From the project root directory:
+
+```bash
+docker build -t ai-data-insights .
+```
+
+Verify image creation:
+
+```bash
+docker images
+```
+
+---
+
+## Configure Environment Variables
+
+Create a `.env` file in the project root:
+
+```env
+OPENAI_API_KEY=your_api_key
+
+OPENAI_BASE_URL=https://api.openai.com/v1
+```
+
+> ⚠️ Never commit your `.env` file to GitHub.
+
+---
+
+## Run Docker Container
+
+### Standard Run
+
+```bash
+docker run \
+--env-file .env \
+-p 5000:5000 \
+ai-data-insights
+```
+
+Application will be available at:
+
+```text
+http://localhost:5000
+```
+
+---
+
+## Persistent Upload Storage
+
+To preserve uploaded datasets outside the container:
+
+```bash
+docker run \
+--env-file .env \
+-v $(pwd)/uploads:/app/uploads \
+-p 5000:5000 \
+ai-data-insights
+```
+
+This mounts the local `uploads` directory into the container and prevents uploaded files from being lost when containers are removed.
+
+---
+
+## View Running Containers
+
+```bash
+docker ps
+```
+
+---
+
+## View Container Logs
+
+```bash
+docker logs <container_id>
+```
+
+---
+
+## Stop Container
+
+```bash
+docker stop <container_id>
+```
+
+---
+
+## Remove Container
+
+```bash
+docker rm <container_id>
+```
+
+---
+
+## Docker Architecture
+
+```text
+┌──────────────────────┐
+│     CSV Dataset      │
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐
+│  Docker Container    │
+│                      │
+│  Flask Application   │
+│  Data Processing     │
+│  Plotly Dashboard    │
+│  GPT Insights Engine │
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐
+│ Browser Dashboard    │
+└──────────────────────┘
+```
+
+---
+
+## Benefits of Docker Deployment
+
+- Reproducible execution environment
+- Simplified deployment process
+- Environment isolation
+- Easy cloud migration
+- Consistent dependency management
+- Production-ready packaging
+
+---
+
+## Future Containerization Enhancements
+
+- Docker Compose Support
+- Multi-Container Architecture
+- Nginx Reverse Proxy
+- Kubernetes Deployment
+- CI/CD Integration
+- Cloud Deployment on AWS, Azure, and GCP
+
+## 👨‍💻 Author
+
+Nawdeep Kumar
+
+AI Engineer | Machine Learning Researcher | Optimization Researcher
+
+---
+
+## ⭐ Support
+
+If you find this project useful, consider giving it a star
