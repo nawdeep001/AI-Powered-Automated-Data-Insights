@@ -1,0 +1,10 @@
+services:
+  ai-data-insights:
+    build: .
+    container_name: ai-data-insights
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    volumes:
+      - ./uploads:/app/uploads
