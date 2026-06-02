@@ -443,3 +443,7 @@ AI Engineer | Machine Learning Researcher | Optimization Researcher
 ## ⭐ Support
 
 If you find this project useful, consider giving it a star
+
+## 📜 License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
